@@ -13,7 +13,6 @@ public class HelloController {
     @GetMapping("setValue")
     public void setValue(String key,String value){
         helloService.setValue(key,value);
-
     }
 
     @GetMapping("getValue")
