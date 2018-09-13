@@ -10,6 +10,7 @@ public class HelloController {
 
     @Autowired
     private HelloService helloService;
+
     @GetMapping("setValue")
     public void setValue(String key,String value){
         helloService.setValue(key,value);
@@ -20,6 +21,11 @@ public class HelloController {
         String value = helloService.getValue(key);
         System.out.println(">>>>>>>>>>>>>>>>>>>>>>>"+value);
         return value;
+    }
+
+    @GetMapping("removeKey")
+    public void removeKey(String key){
+        helloService.removeKey(key);
     }
 
 
