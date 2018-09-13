@@ -10,7 +10,6 @@ public class HelloController {
 
     @Autowired
     private HelloService helloService;
-
     @GetMapping("setValue")
     public void setValue(String key,String value){
         helloService.setValue(key,value);
